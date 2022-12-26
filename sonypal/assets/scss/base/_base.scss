@@ -1,0 +1,92 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  @include breakpoint(desktop-max) {
+    font-size: 9px;
+  }
+  @include breakpoint(ipad-max) {
+    font-size: 8.5px;
+  }
+  @include breakpoint(portrait-mobile-max) {
+    font-size: 7px;
+  }
+}
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// 1Rem = 10px the reason why we have mention 10px in HTML.
+body {
+  font-family: $primary-font;
+  font-size: 1.4rem;
+  letter-spacing: 0.6px;
+  line-height: 2.1rem;
+  // color: $table-body-color;
+  overflow-x: hidden;
+  overflow-y: auto;
+  // text-transform: capitalize;
+  // background-color: $background-color;
+  box-sizing: border-box;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+
+  // scrollbar-color: #c8c8e2 #f1f1f1;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  color: #ccc;
+}
+
+*::-webkit-scrollbar:horizontal {
+  height: 4px;
+}
+
+*::placeholder {
+  color: #fff;
+}
+*::-webkit-input-placeholder {
+  color: #fff;
+}
+*::-moz-placeholder {
+  color: #fff;
+}
+
+//  *::-webkit-scrollbar-track {
+//  background: $primary-color;
+//  }
+
+*::-webkit-scrollbar-thumb {
+  // background-color: $secondary-color;
+  border-radius: 10px;
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}

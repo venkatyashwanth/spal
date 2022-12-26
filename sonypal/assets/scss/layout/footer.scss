@@ -1,0 +1,16 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/_icons";
+
+//Dashboard Menu
+
+:root {
+    --header-height: 3rem;
+    --nav-width: 8rem;  
+    --z-fixed:100 ;
+}
+
+.footer-bg{
+    font-family: $primary-font-regular;
+    background-color: $black-color;
+}

@@ -1,0 +1,218 @@
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  li {
+    font-family: $primary-font;
+  }
+}
+
+// .main-bg .total-score {
+//   @include custom-tablet {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     height: 100vh;
+//   }
+// }
+
+// .main-bg .score-activity {
+//   @include custom-tablet {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
+
+// .main-bg .main-form {
+//   @include custom-tablet {
+//     height: 100vh;
+//   }
+// }
+
+// .bounded-loader {
+//   width: 100%;
+//   text-align: center;
+//   height: 100vh;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   background-image: linear-gradient(25deg, #0091ae, #008148);
+//   z-index: 9999;
+//   .inner-loader {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     -webkit-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+//     .loader {
+//       border: 10px solid #ffffff;
+//       border-radius: 50%;
+//       border-top: 10px solid #0094c2;
+//       width: 70px;
+//       height: 70px;
+//       -webkit-animation: spin 2s linear infinite;
+//       animation: spin 2s linear infinite;
+//     }
+//     /* Safari */
+//     @-webkit-keyframes spin {
+//       0% {
+//         -webkit-transform: rotate(0deg);
+//       }
+//       100% {
+//         -webkit-transform: rotate(360deg);
+//       }
+//     }
+
+//     @keyframes spin {
+//       0% {
+//         -webkit-transform: rotate(0deg);
+//         transform: rotate(0deg);
+//       }
+//       100% {
+//         -webkit-transform: rotate(360deg);
+//         transform: rotate(360deg);
+//       }
+//     }
+//   }
+// }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  background-color: #2a1137;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    opacity: 0;
+    &:hover {
+      color: #f1f1f1;
+    }
+  }
+
+  a:not(:first-child) {
+    margin-bottom: 4rem;
+    @include breakpoint(portrait-mobile-max) {
+      margin-bottom: 6rem;
+    }
+  }
+  .closebtn {
+    position: absolute;
+    top: 4rem;
+    right: 1.5rem;
+    font-size: 3.6rem;
+    margin-left: 5rem;
+  }
+}
+
+.navigationBar {
+  width: 95%;
+  margin: 0 auto;
+  padding: 2rem 0rem;
+  display: flex;
+  align-items: center;
+  .sonyLogo {
+    width: 11rem;
+    @include breakpoint(portrait-mobile-max) {
+      width: 8.5rem;
+    }
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 5.4rem;
+    .nav-menu-items {
+      .nav-menu-list {
+        .nav-items {
+          a {
+            font-family: $primary-font;
+            text-decoration: none;
+            color: $white-color;
+            font-size: 2.2rem;
+            line-height: 2.7rem;
+          }
+        }
+        .nav-items:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+    .nav-menu-socialIcons {
+      display: flex;
+      justify-content: space-between;
+      .social-icons-list {
+        .social-icon:not(:last-child) {
+          margin-right: 2.4rem;
+        }
+      }
+    }
+  }
+  .menuItem {
+    margin-left: 5.4rem;
+    cursor: pointer;
+  }
+}
+
+// .heroSection{
+//   .navigationBar {
+//     width: 95%;
+//     // margin: 0 auto;
+//     padding: 2rem 0rem;
+//     display: flex;
+//     align-items: center;
+//     position: absolute;
+//     left: 5%;
+//     right: 5%;
+//     z-index: 990;
+//     .nav-menu {
+//       display: flex;
+//       justify-content: space-between;
+//       width: 100%;
+//       margin-left: 5.4rem;
+//       .nav-menu-items {
+//         .nav-menu-list {
+//           .nav-items {
+//             a {
+//               font-family: $primary-font;
+//               text-decoration: none;
+//               color: $white-color;
+//               font-size: 2.2rem;
+//               line-height: 2.7rem;
+//             }
+//           }
+//           .nav-items:not(:last-child) {
+//             margin-right: 2rem;
+//           }
+//         }
+//       }
+//       .nav-menu-socialIcons {
+//         display: flex;
+//         justify-content: space-between;
+//         .social-icons-list {
+//           .social-icon:not(:last-child) {
+//             margin-right: 2.4rem;
+//           }
+//         }
+//       }
+//     }
+//     .menuItem {
+//       margin-left: 5.4rem;
+//       cursor: pointer;
+//     }
+//   }
+// }

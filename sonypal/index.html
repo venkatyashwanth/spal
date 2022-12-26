@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SonyPal</title>
+
+    <!-- jquery-hislide -->
+    <link
+      rel="stylesheet"
+      href="./assets/jquery.hiSlide-master/css/jquery.hislide.css"
+    />
+
+    <!-- external-css -->
+    <link rel="stylesheet" href="./assets/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/pages/homepage.css" />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- externalJS -->
+    <!-- <script defer src="./assets/js/carousels.js"></script> -->
+    <!-- <script defer src="./assets/js/sample.js"></script> for development-->
+    <script defer src="./assets/js/toggleSideBar.js"></script>
+  </head>
+  <body>
+    <!-- HeroSection -->
+    <section class="heroSection">
+      <div class="heroSection__content">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" id="closeIconBtn"
+            >&times;</a
+          >
+          <a href="#">प्रतिक्रिया</a>
+          <a href="#">समाचार</a>
+          <a href="#">पल के बारेमें</a>
+          <a href="#">संपर्क करें</a>
+        </div>
+        <div class="heroSection_navigationBar">
+          <a href="#0">
+            <img
+              class="sonyLogo"
+              src="./assets/images/sonypal_logo.svg"
+              alt="sonypalLogo"
+            />
+          </a>
+          <div class="nav-menu">
+            <div class="d-none d-sm-block nav-menu-items">
+              <ul class="nav-menu-list">
+                <li class="nav-items">
+                  <a href="#0">शेड्यूल</a>
+                </li>
+                <li class="nav-items">
+                  <a href="#0">प्रोग्राम</a>
+                </li>
+                <li class="nav-items">
+                  <a href="#0">प्रोमोज</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-menu-socialIcons">
+              <div class="d-none d-sm-block">
+                <ul class="social-icons-list">
+                  <li class="social-icon">
+                    <a href="#0">
+                      <img
+                        src="./assets/icons/Icon simple-instagram.svg"
+                        alt="insta"
+                      />
+                    </a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#0">
+                      <img
+                        src="./assets/icons/Icon awesome-facebook-f.svg"
+                        alt="fb"
+                      />
+                    </a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#0">
+                      <img
+                        src="./assets/icons/Icon ionic-logo-youtube.svg"
+                        alt="youtube"
+                      />
+                    </a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#0">
+                      <img
+                        src="./assets/icons/Icon awesome-twitter.svg"
+                        alt="twitter"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="menuItem" id="menuToggler">
+            <div class="menu_icon">
+              <img src="./assets/icons/menu_icon.svg" alt="icon" />
+            </div>
+            <!-- <div class="menuIcon"></div> -->
+          </div>
+        </div>
+        <div class="heroSection_textContent">
+          <div class="heroSection__description">
+            <div class="presentProgram" id="presentRunningProgram"></div>
+            <div class="carousel_controllers">
+              <a href="#0" id="hiSlideHeaderprev">
+                <i class="fa fa-arrow-left-long"></i> पिछला
+              </a>
+              <div class="countDisplay">
+                <span id="headerSlideNumber">1</span>/7
+              </div>
+              <a href="#0" id="hiSlideHeadernext">
+                अगला <i class="fa fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+          <div class="heroSection__animation">
+            <div>
+              <div class="hi-slide" id="image-rotator-header">
+                <div class="maincarousel">
+                  <!-- TarakMehta -->
+                  <div class="carouselItemsHeader">
+                    <div class="imageContainer">
+                      <img
+                        src="./assets/images/tarakMehta_banner_1.png"
+                        alt="Tarak"
+                      />
+                      <div class="imageTitle">
+                        <p>तारक मेहता का उल्टा चश्मा</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- MereSai -->
+                  <div class="carouselItemsHeader">
+                    <div class="imageContainer">
+                      <img
+                        src="./assets/images/meresai_banner_2.png"
+                        alt="sai"
+                      />
+                      <div class="imageTitle">
+                        <p>मेरे साईं</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ganesh -->
+                  <div class="carouselItemsHeader">
+                    <div class="imageContainer">
+                      <img
+                        src="./assets/images/ganesh_banner_3.png"
+                        alt="ganesh"
+                      />
+                      <div class="imageTitle">
+                        <p>विघ्नहर्ता गणेश</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- shubhLaabh -->
+                  <div class="carouselItemsHeader">
+                    <div class="imageContainer">
+                      <img
+                        src="./assets/images/shubhlaabh_banner_4.png"
+                        alt="shubhLaabh"
+                      />
+                      <div class="imageTitle">
+                        <p>शुभ लाभ</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- MadamSir -->
+                  <div class="carouselItemsHeader">
+                    <div class="imageContainer">
+                      <img
+                        src="./assets/images/madamSir_banner_5.png"
+                        alt="madamsir"
+                      />
+                      <div class="imageTitle">
+                        <p>मैडम सर</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- crimePatrol -->
+                  <div class="carouselItemsHeader">
+                    <div class="imageContainer">
+                      <img
+                        src="./assets/images/crimepatrol_banner_6.png"
+                        alt="crimepatrol"
+                      />
+                      <div class="imageTitle">
+                        <p>क्राइम पेट्रोल</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CID -->
+                  <div class="carouselItemsHeader">
+                    <div class="imageContainer">
+                      <img src="./assets/images/cid_banner_7.png" alt="cid" />
+                      <div class="imageTitle">
+                        <p>सीआइडी</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ComingUp Section -->
+    <section class="d-none d-sm-block nextProgramSection">
+      <h2 class="sectionTitle">अगला कार्यक्रम</h2>
+      <div class="carousel_wrapper">
+        <div class="carousel_container">
+          <div class="programTitle" id="programTitleContainer">
+            <div class="titleBox">
+              <h2></h2>
+              <div class="border_box">
+                <img src="./assets/images/bottom_border.png" alt="border" />
+              </div>
+            </div>
+            <div class="scheduleBox" id="scheduleBoxContainer">
+              <p class="scheduleBoxText"></p>
+              <span class="box1"></span>
+              <span class="box2">बजे</span>
+            </div>
+          </div>
+          <div class="dayMonth">
+            <div class="scheduleBox active">
+              <p class="week">शुक्र</p>
+              <span class="month">25 नवम्बर</span>
+            </div>
+            <div class="scheduleBox">
+              <p class="week">शनि</p>
+              <span class="month">26 नवम्बर</span>
+            </div>
+            <div class="scheduleBox">
+              <p class="week">रवि</p>
+              <span class="month">26 नवम्बर</span>
+            </div>
+          </div>
+
+          <div class="hi-slide" id="image-rotator-next">
+            <div class="maincarousel">
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/promo1_tarak.png"
+                    alt="tarak"
+                  />
+                </div>
+
+                <!-- <div class="titleContent">
+                  <div class="titleBox">
+                    <h2>सी.आई.डी</h2>
+                    <div class="border_box">
+                      <img src="./assets/images/bottom_border.png" alt="border">
+                    </div>
+                  </div>
+                  <div class="scheduleBox">
+                    <p>
+                      रात <span class="box1">11</span>
+                      <span class="box2">बजे</span>
+                    </p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/promo2_sai.png"
+                    alt="sai"
+                  />
+                </div>
+                <!-- <div class="titleContent">
+                  <div class="titleBox">
+                    <h2>सी.आई.डी</h2>
+                    <div class="border_box">
+                      <img src="./assets/images/bottom_border.png" alt="border">
+                    </div>
+                  </div>
+                  <div class="scheduleBox">
+                    <p>
+                      रात <span class="box1">11</span>
+                      <span class="box2">बजे</span>
+                    </p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/promo3_ganesh.png"
+                    alt="ganesh"
+                  />
+                </div>
+                <!-- <div class="titleContent">
+                  <div class="titleBox">
+                    <h2>सी.आई.डी</h2>
+                    <div class="border_box">
+                      <img src="./assets/images/bottom_border.png" alt="border">
+                    </div>
+                  </div>
+                  <div class="scheduleBox">
+                    <p>
+                      रात <span class="box1">11</span>
+                      <span class="box2">बजे</span>
+                    </p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/promo4_shubhlabh.png"
+                    alt="shublaabh"
+                  />
+                </div>
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/promo5_madamsir.png"
+                    alt="madamsir"
+                  />
+                </div>
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/promo6_crimepatrol.png"
+                    alt="crimepatrol"
+                  />
+                </div>
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid"
+                    src="./assets/images/promo7_cid.png"
+                    alt="cid"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carouselControllers">
+        <div>
+          <a href="#0" id="previousProg">
+            <i class="fa fa-arrow-left-long"></i> पिछला
+          </a>
+        </div>
+        <div class="countDisplay">
+          <span id="nextProgSlideNumber">1</span>/7
+        </div>
+        <div>
+          <a href="#0" id="nextProg">
+            अगला <i class="fa fa-arrow-right-long"></i>
+          </a>
+        </div>
+        <div class="expandIcon">
+          <img src="./assets/images/icon_expand.svg" alt="expand" />
+        </div>
+      </div>
+      <!-- <div class="carousel_container">
+        <div class="hi-slide" id="image-rotator-next">
+          <div class="maincarousel">
+            <div class="carouselItems">
+              <div class="imageContainer">
+                
+              </div>
+              
+            </div>
+            <div class="carouselItems">
+              <div class="imageContainer">
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Mobile ComingUp Section -->
+    <section class="d-sm-none mobileComingUpSection">
+      <div class="sectionTitle">
+        <h2>अगला कार्यक्रम</h2>
+      </div>
+      <div class="contentBox">
+        <div class="dayMonth">
+          <div class="scheduleBox active">
+            <p class="week">शुक्र</p>
+            <span class="month">25 नवम्बर</span>
+          </div>
+          <div class="scheduleBox">
+            <p class="week">शनि</p>
+            <span class="month">26 नवम्बर</span>
+          </div>
+          <div class="scheduleBox">
+            <p class="week">रवि</p>
+            <span class="month">26 नवम्बर</span>
+          </div>
+        </div>
+        <div class="slidingSection">
+          <div class="carouselContainer">
+            <div class="hi-slide" id="imageRotatorMobileNext">
+              <div class="maincarousel">
+                <div class="carouselItems">
+                  <div class="imageContainer">
+                    <img src="./assets/images/promo1_tarak.png" />
+                  </div>
+                </div>
+                <div class="carouselItems">
+                  <div class="imageContainer">
+                    <img src="./assets/images/promo2_sai.png" />
+                  </div>
+                </div>
+                <div class="carouselItems">
+                  <div class="imageContainer">
+                    <img src="./assets/images/promo3_ganesh.png" />
+                  </div>
+                </div>
+                <div class="carouselItems">
+                  <div class="imageContainer">
+                    <img src="./assets/images/promo4_shubhlabh.png" />
+                  </div>
+                </div>
+                <div class="carouselItems">
+                  <div class="imageContainer">
+                    <img src="./assets/images/promo5_madamsir.png" />
+                  </div>
+                </div>
+                <div class="carouselItems">
+                  <div class="imageContainer">
+                    <img src="./assets/images/promo6_crimepatrol.png" />
+                  </div>
+                </div>
+                <div class="carouselItems">
+                  <div class="imageContainer">
+                    <img src="./assets/images/promo7_cid.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carouselButtons">
+        <div class="programTitle" id="programTitleContainerMobile">
+          <div class="titleBox">
+            <h2>CID</h2>
+            <div class="border_box">
+              <img src="./assets/images/bottom_border.png" alt="border" />
+            </div>
+          </div>
+          <div class="scheduleBox" id="scheduleBoxContainerMobile">
+            <p class="scheduleBoxText"></p>
+            <span class="box1"></span>
+            <span class="box2">बजे</span>
+          </div>
+        </div>
+        <div class="nextButtonContainer">
+          <a href="javascript:void(0)" id="nextMobileProg">
+            <i class="fa fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- promossection -->
+    <section class="promosSection">
+      <div class="promoTitleContainer">
+        <div class="promoTitle">
+          <h2>प्रोमोज</h2>
+        </div>
+        <div class="socialMediaContainer">
+          <div class="mediaContainer">
+            <a href="#0">
+              <img src="./assets/icons/promo_insta.svg" alt="insta_promo" />
+            </a>
+            <div class="mediaContainer_sub">
+              <a href="#0">
+                <img src="./assets/icons/promo_utube.svg" alt="utube_promo" />
+              </a>
+            </div>
+          </div>
+          <div class="expandIcon">
+            <img src="./assets/images/icon_expand.svg" alt="expand" />
+          </div>
+        </div>
+      </div>
+      <div class="promoCarousel">
+        <div class="carouselContainer">
+          <div class="image-rotator hi-slide">
+            <div class="maincarousel">
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid programImage"
+                    src="./assets/images/promo_cid.png"
+                  />
+                  <div class="rightBorder">
+                    <img src="./assets/images/bottom_border.png" alt="border" />
+                  </div>
+                </div>
+                <div>
+                  <p>सूर्या द सुपर कॉप</p>
+                </div>
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid programImage"
+                    src="./assets/images/promo_cid.png"
+                  />
+                  <div class="rightBorder">
+                    <img src="./assets/images/bottom_border.png" alt="border" />
+                  </div>
+                </div>
+                <div>
+                  <p>साहब बीवी और बॉस एपिसोड 14</p>
+                </div>
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid programImage"
+                    src="./assets/images/promo_cid.png"
+                  />
+                  <div class="rightBorder">
+                    <img src="./assets/images/bottom_border.png" alt="border" />
+                  </div>
+                </div>
+                <div>
+                  <p>साहब बीवी और बॉस एपिसोड 14</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_controllers_promo">
+          <div>
+            <a href="#0" id="hiSlideprev">
+              <i class="fa fa-arrow-left-long"></i> पिछला
+            </a>
+          </div>
+          <div class="countDisplay">
+            <span id="nextSlideNumberPromo">1</span>/7
+          </div>
+          <div>
+            <a href="#0" id="hiSlidenext">
+              अगला <i class="fa fa-arrow-right-long"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footersection -->
+    <footer class="footerSection">
+      <div class="container channelsMainContainer">
+        <div class="row">
+          <div class="col-6 col-lg-3">
+            <ul class="columnOneListItems">
+              <li class="listItem">
+                <a href="#0">अलादीन नाम तो सुना होगा सीआईडी</a>
+              </li>
+              <li>
+                <a href="#0">मंजरी</a>
+              </li>
+              <li>
+                <a href="#0">पार्टनर्स ट्रबल हो गई डबल</a>
+              </li>
+              <li>
+                <a href="#0">जीजाजी छत पर हैं</a>
+              </li>
+              <li>
+                <a href="#0">एफ.आई.आर</a>
+              </li>
+              <li>
+                <a href="#0">तारक मेहता का उल्टा चश्मा</a>
+              </li>
+              <li>
+                <a href="#0">सब खेलो सब जीतो</a>
+              </li>
+              <li>
+                <a href="#0">संकटमोचन महाबली हनुमान</a>
+              </li>
+              <li>
+                <a href="#0">अदालत</a>
+              </li>
+              <li>
+                <a href="#0">तेनाली रामा</a>
+              </li>
+              <li>
+                <a href="#0">बालवीर</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <ul class="columnOneListItems">
+              <li>
+                <a href="#0">घर</a>
+              </li>
+              <li>
+                <a href="#0">प्रोग्राम</a>
+              </li>
+              <li>
+                <a href="#0">शेड्यूल</a>
+              </li>
+              <li>
+                <a href="#0">वीडियो</a>
+              </li>
+              <li>
+                <a href="#0">समाचार</a>
+              </li>
+              <li>
+                <a href="#0">संपर्क करें</a>
+              </li>
+              <li>
+                <a href="#0">प्रतिपुष्टि</a>
+              </li>
+              <li>
+                <a href="#0">अस्वीकरण</a>
+              </li>
+              <li>
+                <a href="#0">पल के बारे में</a>
+              </li>
+              <li>
+                <a href="#0">गोपनीयता नीति</a>
+              </li>
+              <li>
+                <a href="#0">उपयोग की शर्तें</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-2">
+            <ul class="columnOneListItems smallScreen">
+              <li>
+                <a href="#0">हमारे चैनल</a>
+              </li>
+              <li>
+                <a href="#0">सोनी एंटरटेनमेंट टेलीविजन</a>
+              </li>
+              <li>
+                <a href="#0">सोनी मैक्स 2</a>
+              </li>
+
+              <li>
+                <a href="#0">सोनी सब</a>
+              </li>
+              <li>
+                <a href="#0">सोनी पिक्स</a>
+              </li>
+              <li>
+                <a href="#0">सोनी आठ</a>
+              </li>
+              <li>
+                <a href="#0">सोनी लिव</a>
+              </li>
+              <li>
+                <a href="#0">सोनी बीबीसी अर्थ</a>
+              </li>
+              <li>
+                <a href="#0">सोनी वाह</a>
+              </li>
+              <li>
+                <a href="#0">सोनी याय</a>
+              </li>
+              <li>
+                <a href="#0">सोनी मराठी</a>
+              </li>
+              <li>
+                <a href="#0">एसपीएन लाइसेंसिंग</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="channelsSection">
+              <p>
+                वीडियोकॉन डी2एच, एयरटेल, टाटा-स्काई, बिग टीवी, हैथवे, डेन,
+                इनकेबल, साइटिकेबल, फास्टवे, डिजिकेबल, आईसीएनसीएल, मंथन और अन्य
+                प्रमुख ऑपरेटर। सब्सक्राइब करने के लिए अपने डीटीएच/केबल ऑपरेटर को
+                अभी कॉल करें!
+              </p>
+              <div class="channelsList">
+                <div class="channelContainer">
+                  <div class="imageContainer">
+                    <img
+                      class="img-fluid"
+                      src="./assets/images/airtel_digital.png"
+                      alt="airtel"
+                    />
+                  </div>
+                  <div class="textContainer">
+                    <p class="channelText">चैनल नंबर</p>
+                    <p class="channelNumber">120</p>
+                  </div>
+                </div>
+                <div class="channelContainer">
+                  <div class="imageContainer">
+                    <img
+                      class="img-fluid"
+                      src="./assets/images/dish_tv.png"
+                      alt="dishtv"
+                    />
+                  </div>
+                  <div class="textContainer">
+                    <p class="channelText">चैनल नंबर</p>
+                    <p class="channelNumber">125</p>
+                  </div>
+                </div>
+                <div class="channelContainer">
+                  <div class="imageContainer">
+                    <img
+                      class="img-fluid"
+                      src="./assets/images/tata_sky.png"
+                      alt="tatasky"
+                    />
+                  </div>
+                  <div class="textContainer">
+                    <p class="channelText">चैनल नंबर</p>
+                    <p class="channelNumber">131</p>
+                  </div>
+                </div>
+                <div class="channelContainer videocon">
+                  <div class="imageContainer">
+                    <img
+                      class="img-fluid"
+                      src="./assets/images/videocon_d2h.png"
+                      alt="videocon"
+                    />
+                  </div>
+                  <div class="textContainer">
+                    <p class="channelText">चैनल नंबर</p>
+                    <p class="channelNumber">112</p>
+                  </div>
+                </div>
+                <div class="channelContainer reliance">
+                  <div class="imageContainer">
+                    <img
+                      class="img-fluid"
+                      src="./assets/images/reliance_bigtv.png"
+                      alt="reliance"
+                    />
+                  </div>
+                  <div class="textContainer">
+                    <p class="channelText">चैनल नंबर</p>
+                    <p class="channelNumber">214</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrightContainer">
+        <p>© 2022 Copyright Sony Pictures Networks All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/promoSlide.js"></script>
+    <script type="text/javascript" src="./assets/js/nxtProg.js"></script>
+    <script type="text/javascript" src="./assets/js/headerSlide.js"></script>
+    <script type="text/javascript" src="./assets/js/nxtProgMobile.js"></script>
+    <script>
+      $("#image-rotator-header").hiSlideHeader();
+      $(".image-rotator").hiSlide();
+      $("#image-rotator-next").hiSlideNext();
+      $("#imageRotatorMobileNext").hiSlideMobileNext();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/_icons";
+
+.feedBack_section {
+  background-image: linear-gradient(to right, #313ec9, #843fb3);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+
+  .feedBackForm_container {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(14, 29, 68, 0.68),
+      rgba(73, 1, 125, 0.58)
+    );
+    h1 {
+      color: #6b45a8;
+      font-size: 11.2rem;
+      margin: 1rem 0rem 0rem;
+      padding-top: 1rem;
+      @include breakpoint(portrait-mobile-max) {
+        font-size: 7rem;
+      }
+    }
+    .formInputField {
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .form-label {
+        font-family: $formfield-primary-font;
+        color: #fff;
+        padding-left: 1rem;
+        font-weight: bold;
+        line-height: 2.4rem;
+        font-size: 2rem;
+      }
+    }
+    .submitBtnContainer {
+      margin-bottom: -1.8rem;
+      input[type="submit"] {
+        font-family: $formfield-primary-font;
+        background-color: #f6cd15;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.8rem 2.6rem;
+        color: #3f2472;
+        font-size: 2.2rem;
+        line-height: 2.7rem;
+      }
+    }
+  }
+
+  .emptySpace {
+    height: 10rem;
+  }
+}
+
+.footerSection {
+  background-image: url("../../images/footerBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  .channelsMainContainer {
+    padding-top: 10.5rem;
+    .columnOneListItems {
+      display: flex;
+      flex-direction: column;
+      li {
+        a {
+          text-decoration: none;
+          color: $white-color;
+          line-height: 3rem;
+        }
+      }
+    }
+    @include breakpoint(mobile-max) {
+      .columnOneListItems.smallScreen {
+        margin-top: 2rem;
+      }
+    }
+
+    .channelsSection {
+      p {
+        color: $white-color;
+        line-height: 2.3rem;
+      }
+
+      @include breakpoint(ipad-max) {
+        margin-top: 2rem;
+      }
+      @include breakpoint(mobile-max) {
+        margin-top: 2rem;
+      }
+      .channelsList {
+        // max-height: 23.2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 260px;
+        // height: 240px;
+        // width: 39rem;
+        width: 39rem;
+        margin-top: 2.3rem;
+
+        @include breakpoint(ipad-max) {
+          height: 220px;
+          align-items: center;
+          width: 100%;
+        }
+        @include breakpoint(custom-small-mobile-max) {
+          height: 200px;
+          align-items: center;
+          width: 100%;
+        }
+        .channelContainer {
+          background-color: rgba(0, 0, 0, 0.26);
+          display: flex;
+          align-items: center;
+          width: 19rem;
+          // padding: 1.8rem 1.2rem;
+          padding: 1rem 1.2rem;
+          margin-bottom: 0.8rem;
+          flex-grow: 1;
+          @include breakpoint(mobile-max) {
+            width: 22rem;
+            flex-shrink: 1;
+          }
+          @include breakpoint(custom-small-mobile-max) {
+            width: 19rem;
+          }
+
+          .imageContainer {
+            img {
+              max-width: 8rem;
+            }
+          }
+          .textContainer {
+            margin-left: 2.5rem;
+            text-align: center;
+            .channelText {
+              font-size: 1.1rem;
+              color: #9c85ae;
+            }
+            .channelNumber {
+              font-size: 2.6rem;
+              font-weight: 400;
+            }
+          }
+        }
+        .channelContainer.videocon {
+          // min-height: 11.6rem;
+          flex-shrink: 1;
+        }
+        .channelContainer.reliance {
+          // min-height: 11rem;
+          flex-shrink: 1;
+        }
+      }
+    }
+  }
+  .copyrightContainer {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(73, 1, 125, 0.26),
+      rgba(168, 20, 181, 0.26)
+    );
+    padding: 3.2rem 0rem;
+    p {
+      color: $white-color;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+}

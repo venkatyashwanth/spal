@@ -1,0 +1,675 @@
+/* placeholder */
+.heroSection .heroSection__content {
+  background-color: #2a1137;
+  position: relative; }
+  .heroSection .heroSection__content .heroSection_navigationBar {
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    z-index: 990;
+    width: 95%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); }
+    .heroSection .heroSection__content .heroSection_navigationBar .sonyLogo {
+      width: 11rem; }
+      @media (max-width: 575px) {
+        .heroSection .heroSection__content .heroSection_navigationBar .sonyLogo {
+          width: 8.5rem; } }
+    .heroSection .heroSection__content .heroSection_navigationBar .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-left: 5.4rem; }
+      .heroSection .heroSection__content .heroSection_navigationBar .nav-menu .nav-menu-items .nav-menu-list .nav-items a {
+        font-family: "Lato_black", sans-serif;
+        text-decoration: none;
+        color: #fff;
+        font-size: 2.2rem;
+        line-height: 2.7rem; }
+      .heroSection .heroSection__content .heroSection_navigationBar .nav-menu .nav-menu-items .nav-menu-list .nav-items:not(:last-child) {
+        margin-right: 2rem; }
+      .heroSection .heroSection__content .heroSection_navigationBar .nav-menu .nav-menu-socialIcons {
+        display: flex;
+        justify-content: space-between; }
+        .heroSection .heroSection__content .heroSection_navigationBar .nav-menu .nav-menu-socialIcons .social-icons-list .social-icon:not(:last-child) {
+          margin-right: 2.4rem; }
+    .heroSection .heroSection__content .heroSection_navigationBar .menuItem {
+      margin-left: 5.4rem;
+      cursor: pointer; }
+  .heroSection .heroSection__content .heroSection_textContent {
+    display: flex; }
+    @media (max-width: 575px) {
+      .heroSection .heroSection__content .heroSection_textContent {
+        flex-direction: column; } }
+    .heroSection .heroSection__content .heroSection_textContent .heroSection__description {
+      width: 40%;
+      background-image: url("../../images/herosection_gradientClr.png");
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      order: 1; }
+      @media (max-width: 991px) {
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__description {
+          width: 60%; } }
+      @media (max-width: 575px) {
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__description {
+          order: 2;
+          background-image: url("../../images/herosectionGradient_mobile.png"); } }
+      .heroSection .heroSection__content .heroSection_textContent .heroSection__description .presentProgram {
+        padding-top: 2rem;
+        width: 32rem;
+        height: 42rem;
+        overflow: hidden; }
+      .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 2rem; }
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers .countDisplay {
+          color: #fff;
+          font-size: 2rem; }
+          .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers .countDisplay span {
+            font-size: 5rem; }
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers a {
+          font-size: 2.4rem;
+          text-decoration: none; }
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers #hiSlideHeaderprev {
+          color: #be6ad1;
+          padding-right: 1rem; }
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers #hiSlideHeadernext {
+          color: #fff;
+          padding-left: 1rem; }
+      @media (max-width: 575px) {
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__description {
+          width: 100%;
+          order: 2;
+          min-height: 50vh;
+          height: 100%; } }
+    .heroSection .heroSection__content .heroSection_textContent .heroSection__animation {
+      width: 60%;
+      display: flex;
+      min-height: 100vh;
+      height: 100%;
+      position: relative;
+      order: 2;
+      overflow: hidden; }
+      @media (max-width: 575px) {
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__animation {
+          width: 100%;
+          min-height: 80vh;
+          order: 1; } }
+      .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide {
+        margin: 0px; }
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader {
+          position: absolute;
+          margin: 0px;
+          padding: 0px; }
+          .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer {
+            max-width: 55%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative; }
+            @media (max-width: 991px) {
+              .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer {
+                max-width: 100%; } }
+            @media (max-width: 575px) {
+              .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer {
+                max-width: 80%;
+                height: 80vh; } }
+            @media (max-width: 359px) {
+              .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer {
+                max-width: 100%; } }
+            .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer img {
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%); }
+              @media (max-width: 991px) {
+                .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer img {
+                  width: 100%; } }
+              @media (max-width: 575px) {
+                .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer img {
+                  width: auto;
+                  left: 0%;
+                  transform: translateX(-5%); } }
+            .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer .imageTitle.inactive {
+              position: absolute;
+              right: 1rem;
+              bottom: 1rem;
+              padding: 2rem;
+              background-image: linear-gradient(to top, #2a1137 50%, rgba(255, 255, 255, 0) 50%);
+              border-bottom-right-radius: 2rem; }
+              .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer .imageTitle.inactive p {
+                font-size: 3rem;
+                color: #ffffff;
+                display: inline-block;
+                writing-mode: vertical-rl;
+                transform: rotate(180deg); }
+            .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer .imageTitle.active {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              padding: 1.3rem 1rem;
+              margin: 2rem;
+              background-image: linear-gradient(to right, #2a1137 50%, rgba(255, 255, 255, 0) 50%);
+              border-bottom-left-radius: 2rem;
+              animation: showText 2s; }
+              .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer .imageTitle.active p {
+                font-size: 3rem;
+                line-height: 3.6rem;
+                color: #ffffff; }
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+    bottom: 10; }
+  50% {
+    opacity: 0.5;
+    bottom: 5; }
+  100% {
+    opacity: 1;
+    bottom: 0; } }
+
+.nextProgramSection {
+  position: relative;
+  background-image: linear-gradient(to right bottom, #313ec9, #843fb3); }
+  .nextProgramSection .sectionTitle {
+    font-family: "Lato_black", sans-serif;
+    text-align: end;
+    padding-top: 3rem;
+    font-size: 14rem;
+    color: #8165c966;
+    margin: 0; }
+    @media (max-width: 575px) {
+      .nextProgramSection .sectionTitle {
+        font-size: 7rem; } }
+  .nextProgramSection .carousel_wrapper {
+    overflow: hidden;
+    margin-top: 10px; }
+    .nextProgramSection .carousel_wrapper .carousel_container {
+      margin-bottom: 10rem;
+      background-image: linear-gradient(to bottom, rgba(74, 1, 126, 0.58), rgba(14, 29, 68, 0.68));
+      position: relative; }
+      .nextProgramSection .carousel_wrapper .carousel_container .programTitle {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%); }
+        @media (max-width: 1199px) {
+          .nextProgramSection .carousel_wrapper .carousel_container .programTitle {
+            top: 45%;
+            left: 60%; } }
+        @media (max-width: 991px) {
+          .nextProgramSection .carousel_wrapper .carousel_container .programTitle {
+            top: 45%;
+            left: 65%; } }
+        .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox {
+          position: relative; }
+          .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox h2 {
+            color: #fff;
+            font-size: 8rem;
+            display: inline-block; }
+            @media (max-width: 1199px) {
+              .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox h2 {
+                font-size: 7rem; } }
+            @media (max-width: 991px) {
+              .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox h2 {
+                font-size: 6rem; } }
+          .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox .border_box {
+            position: absolute;
+            bottom: 0x;
+            right: 0px;
+            transform: translate(60%, -70%); }
+            .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox .border_box img {
+              width: 4rem; }
+        .nextProgramSection .carousel_wrapper .carousel_container .programTitle .scheduleBox {
+          padding-top: 3rem; }
+          .nextProgramSection .carousel_wrapper .carousel_container .programTitle .scheduleBox p {
+            display: inline-block;
+            font-size: 4rem;
+            color: white;
+            font-weight: 600; }
+          .nextProgramSection .carousel_wrapper .carousel_container .programTitle .scheduleBox .box1 {
+            font-size: 8rem;
+            color: #4bc7c6; }
+          .nextProgramSection .carousel_wrapper .carousel_container .programTitle .scheduleBox .box2 {
+            font-size: 4rem;
+            color: #4bc7c6; }
+      .nextProgramSection .carousel_wrapper .carousel_container .programTitle.active {
+        animation: titleBox 1s ease-in; }
+
+@keyframes titleBox {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.2; }
+  50% {
+    opacity: 0.4; }
+  75% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1; } }
+      .nextProgramSection .carousel_wrapper .carousel_container .dayMonth {
+        position: absolute;
+        right: 1rem;
+        display: flex; }
+        @media (max-width: 575px) {
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth {
+            display: none; } }
+        .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox {
+          text-align: center;
+          margin-right: 3.4rem;
+          color: rgba(255, 255, 255, 0.5);
+          font-family: "Lato_black", sans-serif; }
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox .week {
+            font-size: 3.2rem;
+            line-height: 4rem; }
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox .month {
+            font-size: 1.4rem;
+            line-height: 1.6rem; }
+        .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox.active {
+          color: #fff;
+          margin-top: -3rem;
+          font-family: "Lato_black", sans-serif; }
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox.active .week {
+            font-size: 6rem;
+            line-height: 7.2rem; }
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox.active .month {
+            font-size: 1.8rem;
+            line-height: 2.2rem; }
+      .nextProgramSection .carousel_wrapper .carousel_container .hi-slide {
+        width: 100% !important;
+        margin: 10px auto 0 !important; }
+        .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel {
+          margin: 5rem 0; }
+          .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            align-items: center; }
+            .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .imageContainer {
+              max-width: 400px;
+              position: relative; }
+            .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent {
+              opacity: 0;
+              transition: all 2s ease-in; }
+              .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent .titleBox {
+                position: relative; }
+                .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent .titleBox h2 {
+                  font-family: "Lato_black", sans-serif;
+                  color: #fff;
+                  font-size: 8rem; }
+                .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent .titleBox .border_box {
+                  position: absolute;
+                  bottom: 0x;
+                  right: 0px;
+                  transform: translate(60%, -70%); }
+                  .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent .titleBox .border_box img {
+                    width: 4rem; }
+              .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent .scheduleBox {
+                padding-top: 3rem;
+                font-family: "Lato_black", sans-serif; }
+                .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent .scheduleBox p {
+                  font-size: 4rem;
+                  color: white;
+                  font-weight: 600; }
+                  .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent .scheduleBox p .box1 {
+                    font-size: 8rem;
+                    color: #4bc7c6; }
+                  .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent .scheduleBox p .box2 {
+                    font-size: 4rem;
+                    color: #4bc7c6; }
+            .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent.active {
+              opacity: 1;
+              margin-left: 2rem; }
+
+@keyframes mymove {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  75% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+  .nextProgramSection .carouselControllers {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    align-items: end;
+    margin-left: 30px;
+    padding-bottom: 5.2rem; }
+    .nextProgramSection .carouselControllers .countDisplay {
+      color: #fff;
+      font-size: 2rem; }
+      .nextProgramSection .carouselControllers .countDisplay span {
+        font-size: 5rem; }
+    .nextProgramSection .carouselControllers .expandIcon {
+      margin-left: 2rem;
+      cursor: pointer; }
+    .nextProgramSection .carouselControllers a {
+      font-size: 2.4rem;
+      text-decoration: none; }
+    .nextProgramSection .carouselControllers #previousProg {
+      color: #be6ad1;
+      padding-right: 1rem; }
+    .nextProgramSection .carouselControllers #nextProg {
+      color: #fff;
+      padding-left: 1rem; }
+
+@keyframes example {
+  from {
+    bottom: 0%;
+    left: 100%;
+    height: 0px; }
+  to {
+    height: 320px;
+    left: 0%; } }
+
+.mobileComingUpSection {
+  background-image: linear-gradient(to right bottom, #313ec9, #843fb3); }
+  .mobileComingUpSection .sectionTitle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 10rem; }
+    .mobileComingUpSection .sectionTitle h2 {
+      font-family: "Lato_black", sans-serif;
+      font-size: 6rem;
+      font-weight: 700;
+      margin-bottom: -3rem;
+      color: #8165c9; }
+  .mobileComingUpSection .contentBox {
+    background-color: #4a017d; }
+    .mobileComingUpSection .contentBox .dayMonth {
+      display: flex;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      padding-left: 3rem; }
+      .mobileComingUpSection .contentBox .dayMonth .scheduleBox {
+        padding-top: 3rem;
+        margin-right: 3rem;
+        text-align: center; }
+        .mobileComingUpSection .contentBox .dayMonth .scheduleBox p {
+          font-size: 2rem;
+          color: rgba(255, 255, 255, 0.7);
+          font-weight: 400;
+          padding-bottom: 0.5rem; }
+        .mobileComingUpSection .contentBox .dayMonth .scheduleBox span {
+          font-size: 1rem;
+          color: rgba(255, 255, 255, 0.7); }
+      .mobileComingUpSection .contentBox .dayMonth .scheduleBox.active p {
+        font-size: 4rem;
+        color: #fff;
+        font-weight: 600;
+        padding-bottom: 2rem; }
+      .mobileComingUpSection .contentBox .dayMonth .scheduleBox.active span {
+        font-size: 2rem;
+        color: #fff; }
+    .mobileComingUpSection .contentBox .slidingSection {
+      margin-top: 8rem; }
+      .mobileComingUpSection .contentBox .slidingSection .carouselContainer {
+        overflow: hidden; }
+        .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide {
+          width: 100% !important;
+          margin-top: 0px !important;
+          height: 28rem; }
+          .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            cursor: pointer; }
+            .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer {
+              width: 100%;
+              height: 28rem;
+              position: relative; }
+              .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer img {
+                height: 100%;
+                width: auto; }
+  .mobileComingUpSection .carouselButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+    margin: auto;
+    padding: 4rem 0rem; }
+    .mobileComingUpSection .carouselButtons .programTitle .titleBox {
+      position: relative; }
+      .mobileComingUpSection .carouselButtons .programTitle .titleBox h2 {
+        color: #fff;
+        font-size: 4rem; }
+      .mobileComingUpSection .carouselButtons .programTitle .titleBox .border_box {
+        position: absolute;
+        bottom: -1.8rem;
+        right: -2rem; }
+        @media (max-width: 575px) {
+          .mobileComingUpSection .carouselButtons .programTitle .titleBox .border_box {
+            bottom: -2.6rem;
+            right: -2.6rem; } }
+        .mobileComingUpSection .carouselButtons .programTitle .titleBox .border_box img {
+          width: 4rem; }
+    .mobileComingUpSection .carouselButtons .programTitle .scheduleBox {
+      padding-top: 2rem; }
+      .mobileComingUpSection .carouselButtons .programTitle .scheduleBox p {
+        display: inline-block;
+        font-size: 4rem;
+        color: white;
+        font-weight: 600; }
+      .mobileComingUpSection .carouselButtons .programTitle .scheduleBox .box1 {
+        font-size: 4rem;
+        color: #4bc7c6; }
+      .mobileComingUpSection .carouselButtons .programTitle .scheduleBox .box2 {
+        font-size: 2rem;
+        color: #4bc7c6; }
+    .mobileComingUpSection .carouselButtons .nextButtonContainer a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 3.2rem; }
+
+.promosSection {
+  background-image: url("../../images/promos_background.png");
+  background-size: cover;
+  height: 100%; }
+  .promosSection .promoTitleContainer .promoTitle {
+    float: left; }
+    .promosSection .promoTitleContainer .promoTitle h2 {
+      font-size: 14rem;
+      font-family: "Lato_black", sans-serif;
+      line-height: 16.8rem;
+      padding-top: 2rem;
+      color: #6e3795; }
+      @media (max-width: 575px) {
+        .promosSection .promoTitleContainer .promoTitle h2 {
+          font-size: 7rem;
+          line-height: 8rem;
+          padding-top: 1rem; } }
+  .promosSection .promoTitleContainer .socialMediaContainer {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .promosSection .promoTitleContainer .socialMediaContainer .mediaContainer {
+      background-image: linear-gradient(to right, #a814b5, #4a017d);
+      border-bottom-left-radius: 30px;
+      width: 20rem;
+      height: 8rem; }
+      .promosSection .promoTitleContainer .socialMediaContainer .mediaContainer a {
+        display: inline-block;
+        padding-top: 2rem;
+        padding-left: 3rem; }
+      .promosSection .promoTitleContainer .socialMediaContainer .mediaContainer .mediaContainer_sub {
+        float: right;
+        background-image: linear-gradient(60deg, #a814b5 40%, #4a017d);
+        border-bottom-left-radius: 30px;
+        width: 50%;
+        height: 100%; }
+        .promosSection .promoTitleContainer .socialMediaContainer .mediaContainer .mediaContainer_sub a {
+          display: inline-block;
+          padding-top: 2rem;
+          padding-left: 3rem; }
+    .promosSection .promoTitleContainer .socialMediaContainer .expandIcon {
+      margin-right: 6rem;
+      margin-top: 2rem;
+      cursor: pointer; }
+  .promosSection .promoTitleContainer::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .promosSection .promoCarousel .carouselContainer {
+    height: 60rem;
+    overflow: hidden; }
+    .promosSection .promoCarousel .carouselContainer .hi-slide {
+      width: 95% !important;
+      margin: 10px auto 0 !important; }
+      .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems {
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        cursor: pointer; }
+        .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer {
+          width: 80%;
+          position: relative; }
+          .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer .programImage {
+            border-radius: 20px; }
+        .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems .rightBorder {
+          display: none;
+          position: absolute;
+          bottom: -3.5rem;
+          right: -4.5rem;
+          z-index: 9999; }
+          .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems .rightBorder img {
+            width: 5rem; }
+        .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems p {
+          font-family: "Lato_black", sans-serif;
+          font-size: 2rem;
+          color: white;
+          padding-top: 1rem;
+          line-height: 3.6rem; }
+          @media (max-width: 991px) {
+            .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems p {
+              font-size: 1.8rem; } }
+          @media (max-width: 575px) {
+            .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems p {
+              font-size: 2rem; } }
+      .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems.active .rightBorder {
+        display: block; }
+  .promosSection .promoCarousel .carousel_controllers_promo {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 90%;
+    padding-bottom: 5.2rem; }
+    .promosSection .promoCarousel .carousel_controllers_promo .countDisplay {
+      color: #fff;
+      font-size: 2rem; }
+      .promosSection .promoCarousel .carousel_controllers_promo .countDisplay span {
+        font-size: 5rem; }
+    .promosSection .promoCarousel .carousel_controllers_promo a {
+      font-size: 2.4rem;
+      text-decoration: none; }
+    .promosSection .promoCarousel .carousel_controllers_promo #hiSlideprev {
+      color: #be6ad1;
+      padding-right: 1rem; }
+    .promosSection .promoCarousel .carousel_controllers_promo #hiSlidenext {
+      color: #fff;
+      padding-left: 1rem; }
+
+.footerSection {
+  background-image: url("../../images/footerBg.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .footerSection .channelsMainContainer {
+    padding-top: 10.5rem; }
+    .footerSection .channelsMainContainer .columnOneListItems {
+      display: flex;
+      flex-direction: column; }
+      .footerSection .channelsMainContainer .columnOneListItems li a {
+        text-decoration: none;
+        color: #fff;
+        line-height: 3rem;
+        font-size: 1.4rem; }
+        @media (max-width: 575px) {
+          .footerSection .channelsMainContainer .columnOneListItems li a {
+            font-size: 1.8rem; } }
+    @media (max-width: 767px) {
+      .footerSection .channelsMainContainer .columnOneListItems.smallScreen {
+        margin-top: 2rem; } }
+    .footerSection .channelsMainContainer .channelsSection p {
+      color: #fff;
+      line-height: 2.3rem;
+      font-size: 1.4rem; }
+      @media (max-width: 575px) {
+        .footerSection .channelsMainContainer .channelsSection p {
+          font-size: 1.8rem; } }
+    @media (max-width: 991px) {
+      .footerSection .channelsMainContainer .channelsSection {
+        margin-top: 2rem; } }
+    @media (max-width: 767px) {
+      .footerSection .channelsMainContainer .channelsSection {
+        margin-top: 2rem; } }
+    .footerSection .channelsMainContainer .channelsSection .channelsList {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 260px;
+      width: 39rem;
+      margin-top: 2.3rem; }
+      @media (max-width: 991px) {
+        .footerSection .channelsMainContainer .channelsSection .channelsList {
+          height: 220px;
+          align-items: center;
+          width: 100%; } }
+      @media (max-width: 359px) {
+        .footerSection .channelsMainContainer .channelsSection .channelsList {
+          height: 200px;
+          align-items: center;
+          width: 100%; } }
+      .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer {
+        background-color: rgba(0, 0, 0, 0.26);
+        display: flex;
+        align-items: center;
+        width: 19rem;
+        padding: 1rem 1.2rem;
+        margin-bottom: 0.8rem;
+        flex-grow: 1; }
+        @media (max-width: 767px) {
+          .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer {
+            width: 22rem;
+            flex-shrink: 1; } }
+        @media (max-width: 359px) {
+          .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer {
+            width: 19rem; } }
+        .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer .imageContainer img {
+          max-width: 8rem; }
+        .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer .textContainer {
+          margin-left: 2.5rem;
+          text-align: center; }
+          .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer .textContainer .channelText {
+            font-size: 1.1rem;
+            color: #9c85ae; }
+          .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer .textContainer .channelNumber {
+            font-size: 2.6rem;
+            font-weight: 400; }
+      .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer.videocon {
+        flex-shrink: 1; }
+      .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer.reliance {
+        flex-shrink: 1; }
+  .footerSection .copyrightContainer {
+    background-image: linear-gradient(to bottom, rgba(73, 1, 125, 0.26), rgba(168, 20, 181, 0.26));
+    padding: 3.2rem 0rem; }
+    .footerSection .copyrightContainer p {
+      color: #fff;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 400; }
+
+.openSideNav {
+  width: 250px; }
+  .openSideNav a {
+    opacity: 1; }
+
+.closeSideNav {
+  width: 0px; }
