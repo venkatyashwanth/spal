@@ -23,6 +23,7 @@
     <!-- <script defer src="./assets/js/carousels.js"></script> -->
     <!-- <script defer src="./assets/js/sample.js"></script> for development-->
     <script defer src="./assets/js/toggleSideBar.js"></script>
+    <script defer src="./assets/js/toggleActiveClasss.js"></script>
   </head>
   <body>
     <!-- HeroSection -->
@@ -112,8 +113,9 @@
               <a href="#0" id="hiSlideHeaderprev">
                 <i class="fa fa-arrow-left-long"></i> पिछला
               </a>
-              <div class="countDisplay">
-                <span id="headerSlideNumber">1</span>/7
+              <div class="countDisplayHeader">
+                <span class="dynamicValue" id="headerSlideNumber"></span>/
+                <span class="constantValue" id="headerTotalSlideNumber"></span>
               </div>
               <a href="#0" id="hiSlideHeadernext">
                 अगला <i class="fa fa-arrow-right-long"></i>
@@ -237,16 +239,16 @@
               <span class="box2">बजे</span>
             </div>
           </div>
-          <div class="dayMonth">
-            <div class="scheduleBox active">
-              <p class="week">शुक्र</p>
-              <span class="month">25 नवम्बर</span>
+          <div class="dayMonth" id="nextProgramSchedule">
+            <div class="scheduleBoxDates">
+                <p class="week">शुक्र</p>
+                <span class="month">25 नवम्बर</span>
             </div>
-            <div class="scheduleBox">
+            <div class="scheduleBoxDates presentSchedule">
               <p class="week">शनि</p>
               <span class="month">26 नवम्बर</span>
             </div>
-            <div class="scheduleBox">
+            <div class="scheduleBoxDates">
               <p class="week">रवि</p>
               <span class="month">26 नवम्बर</span>
             </div>
@@ -262,21 +264,6 @@
                     alt="tarak"
                   />
                 </div>
-
-                <!-- <div class="titleContent">
-                  <div class="titleBox">
-                    <h2>सी.आई.डी</h2>
-                    <div class="border_box">
-                      <img src="./assets/images/bottom_border.png" alt="border">
-                    </div>
-                  </div>
-                  <div class="scheduleBox">
-                    <p>
-                      रात <span class="box1">11</span>
-                      <span class="box2">बजे</span>
-                    </p>
-                  </div>
-                </div> -->
               </div>
               <div class="carouselItems">
                 <div class="imageContainer">
@@ -286,20 +273,6 @@
                     alt="sai"
                   />
                 </div>
-                <!-- <div class="titleContent">
-                  <div class="titleBox">
-                    <h2>सी.आई.डी</h2>
-                    <div class="border_box">
-                      <img src="./assets/images/bottom_border.png" alt="border">
-                    </div>
-                  </div>
-                  <div class="scheduleBox">
-                    <p>
-                      रात <span class="box1">11</span>
-                      <span class="box2">बजे</span>
-                    </p>
-                  </div>
-                </div> -->
               </div>
               <div class="carouselItems">
                 <div class="imageContainer">
@@ -309,20 +282,6 @@
                     alt="ganesh"
                   />
                 </div>
-                <!-- <div class="titleContent">
-                  <div class="titleBox">
-                    <h2>सी.आई.डी</h2>
-                    <div class="border_box">
-                      <img src="./assets/images/bottom_border.png" alt="border">
-                    </div>
-                  </div>
-                  <div class="scheduleBox">
-                    <p>
-                      रात <span class="box1">11</span>
-                      <span class="box2">बजे</span>
-                    </p>
-                  </div>
-                </div> -->
               </div>
               <div class="carouselItems">
                 <div class="imageContainer">
@@ -372,7 +331,8 @@
           </a>
         </div>
         <div class="countDisplay">
-          <span id="nextProgSlideNumber">1</span>/7
+          <span class="dynamicValue" id="nextProgSlideNumber"></span>/
+          <span class="TotalValue" id="nextProgTotalNumber"></span>
         </div>
         <div>
           <a href="#0" id="nextProg">
@@ -383,24 +343,6 @@
           <img src="./assets/images/icon_expand.svg" alt="expand" />
         </div>
       </div>
-      <!-- <div class="carousel_container">
-        <div class="hi-slide" id="image-rotator-next">
-          <div class="maincarousel">
-            <div class="carouselItems">
-              <div class="imageContainer">
-                
-              </div>
-              
-            </div>
-            <div class="carouselItems">
-              <div class="imageContainer">
-                
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div> -->
     </section>
 
     <!-- Mobile ComingUp Section -->
@@ -557,6 +499,34 @@
                   <p>साहब बीवी और बॉस एपिसोड 14</p>
                 </div>
               </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid programImage"
+                    src="./assets/images/promo_cid.png"
+                  />
+                  <div class="rightBorder">
+                    <img src="./assets/images/bottom_border.png" alt="border" />
+                  </div>
+                </div>
+                <div>
+                  <p>साहब बीवी और बॉस एपिसोड 14</p>
+                </div>
+              </div>
+              <div class="carouselItems">
+                <div class="imageContainer">
+                  <img
+                    class="img-fluid programImage"
+                    src="./assets/images/promo_cid.png"
+                  />
+                  <div class="rightBorder">
+                    <img src="./assets/images/bottom_border.png" alt="border" />
+                  </div>
+                </div>
+                <div>
+                  <p>साहब बीवी और बॉस एपिसोड 14</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -566,8 +536,9 @@
               <i class="fa fa-arrow-left-long"></i> पिछला
             </a>
           </div>
-          <div class="countDisplay">
-            <span id="nextSlideNumberPromo">1</span>/7
+          <div class="countDisplayPromo">
+            <span class="dynamicValue" id="nextSlideNumberPromo">1</span>/
+            <span class="constantValue" id="nextSlideTotalNumberPromo">7</span>
           </div>
           <div>
             <a href="#0" id="hiSlidenext">

@@ -2,23 +2,24 @@
   var slide = function (ele, options) {
     var $ele = $(ele);
     var setting = {
-      speed: 1000,
-      interval: 4000,
+      speed: 400,
+      interval: 3000,
     };
     $.extend(true, setting, options);
 
     var screensize = screen.width;
     var states = [
       {
-        $zIndex: 3,
+        $zIndex: 5,
         $active: true,
         width: "50%",
         top: "50%",
-        left: 0,
+        // left: 0,
+        left: "0",
         $opacity: 1,
       },
       {
-        $zIndex: 2,
+        $zIndex: 4,
         $active: false,
         width: "25%",
         top: "70%",
@@ -26,12 +27,28 @@
         $opacity: 1,
       },
       {
-        $zIndex: 1,
+        $zIndex: 3,
         $active: false,
         width: "25%",
         top: "70%",
         left: "80%",
         $opacity: 1,
+      },
+      {
+        $zIndex: 2,
+        $active: false,
+        width: "25%",
+        top: "70%",
+        left: "100%",
+        $opacity: 0,
+      },
+      {
+        $zIndex: 1,
+        $active: false,
+        width: "25%",
+        top: "70%",
+        left: "-120%",
+        $opacity: 0,
       },
     ];
     
@@ -60,7 +77,7 @@
           top: "70%",
           left: "120%",
           $opacity: 1,
-        },
+        }
       ];
     }
 
@@ -82,11 +99,11 @@
         timer = null;
       })
       .on("mouseleave", function () {
-        // autoPlay();
+        autoPlay();
       });
 
     move();
-    // autoPlay();
+    autoPlay();
     function move() {
       $lis.each(function (index, element) {
         var state = states[index];
@@ -95,7 +112,7 @@
           .css("zIndex", state.$zIndex)
           .finish()
           .animate(state, setting.speed)
-          .find("img")
+          // .find("img")
           .css("opacity", state.$opacity);
 
         //   $(element).addClass(state.$active);
@@ -107,6 +124,9 @@
           $(element).removeClass("active");
         }
       });
+
+      let totalLength = states.length;
+      $("#nextSlideTotalNumberPromo").text(totalLength);
 
       //   $lisCont.each(function (index, element) {
       //     var state = statesCont[index];

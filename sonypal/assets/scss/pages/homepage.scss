@@ -137,11 +137,16 @@
           display: flex;
           align-items: flex-end;
           padding-bottom: 2rem;
-          .countDisplay {
+          .countDisplayHeader {
             color: $white-color;
-            font-size: 2rem;
-            span {
+            // font-size: 2rem;
+            .dynamicValue {
+              color: $white-color;
               font-size: 5rem;
+            }
+            .constantValue{
+              color: $white-color;
+              font-size: 2rem !important;
             }
           }
           a {
@@ -346,8 +351,9 @@
           .border_box {
             position: absolute;
             bottom: 0x;
-            right: 0px;
-            transform: translate(60%, -70%);
+            right: -.3rem;
+            // transform: translate(60%, -70%);
+            transform: translate(60%, -45%);
             img {
               width: 4rem;
             }
@@ -399,15 +405,19 @@
         position: absolute;
         right: 1rem;
         display: flex;
+        z-index: 999;
         // justify-content: flex-end;
         @include breakpoint(portrait-mobile-max) {
           display: none;
         }
-        .scheduleBox {
+        .scheduleBoxDates {
           text-align: center;
           margin-right: 3.4rem;
           color: rgba(255, 255, 255, 0.5);
           font-family: $primary-font;
+          &:hover{
+            cursor: pointer;
+          }
           .week {
             font-size: 3.2rem;
             line-height: 4rem;
@@ -417,10 +427,11 @@
             line-height: 1.6rem;
           }
         }
-        .scheduleBox.active {
+        .scheduleBoxDates.presentSchedule {
           color: #fff;
           margin-top: -3rem;
           font-family: $primary-font;
+          cursor: pointer;
           .week {
             font-size: 6rem;
             line-height: 7.2rem;
@@ -448,6 +459,9 @@
               // width: 80%;
               max-width: 400px;
               position: relative;
+              img{
+                transition: all 1s;
+              }
             }
             .titleContent {
               // display: none;
@@ -526,7 +540,7 @@
     .countDisplay {
       color: $white-color;
       font-size: 2rem;
-      span {
+      .dynamicValue {
         font-size: 5rem;
       }
     }
@@ -539,7 +553,8 @@
       text-decoration: none;
     }
     #previousProg {
-      color: #be6ad1;
+      color: #fff;
+      // color: #be6ad1;
       padding-right: 1rem;
     }
     #nextProg {
@@ -851,11 +866,14 @@
       // padding-bottom: 200px;
       width: 90%;
       padding-bottom: 5.2rem;
-      .countDisplay {
+      .countDisplayPromo {
         color: $white-color;
-        font-size: 2rem;
-        span {
+        
+        .dynamicValue{
           font-size: 5rem;
+        }
+        .constantValue {
+          font-size: 2rem;
         }
       }
       a {

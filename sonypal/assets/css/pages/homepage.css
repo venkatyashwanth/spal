@@ -67,11 +67,14 @@
         display: flex;
         align-items: flex-end;
         padding-bottom: 2rem; }
-        .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers .countDisplay {
-          color: #fff;
-          font-size: 2rem; }
-          .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers .countDisplay span {
+        .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers .countDisplayHeader {
+          color: #fff; }
+          .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers .countDisplayHeader .dynamicValue {
+            color: #fff;
             font-size: 5rem; }
+          .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers .countDisplayHeader .constantValue {
+            color: #fff;
+            font-size: 2rem !important; }
         .heroSection .heroSection__content .heroSection_textContent .heroSection__description .carousel_controllers a {
           font-size: 2.4rem;
           text-decoration: none; }
@@ -220,8 +223,8 @@
           .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox .border_box {
             position: absolute;
             bottom: 0x;
-            right: 0px;
-            transform: translate(60%, -70%); }
+            right: -.3rem;
+            transform: translate(60%, -45%); }
             .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox .border_box img {
               width: 4rem; }
         .nextProgramSection .carousel_wrapper .carousel_container .programTitle .scheduleBox {
@@ -254,29 +257,33 @@
       .nextProgramSection .carousel_wrapper .carousel_container .dayMonth {
         position: absolute;
         right: 1rem;
-        display: flex; }
+        display: flex;
+        z-index: 999; }
         @media (max-width: 575px) {
           .nextProgramSection .carousel_wrapper .carousel_container .dayMonth {
             display: none; } }
-        .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox {
+        .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBoxDates {
           text-align: center;
           margin-right: 3.4rem;
           color: rgba(255, 255, 255, 0.5);
           font-family: "Lato_black", sans-serif; }
-          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox .week {
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBoxDates:hover {
+            cursor: pointer; }
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBoxDates .week {
             font-size: 3.2rem;
             line-height: 4rem; }
-          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox .month {
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBoxDates .month {
             font-size: 1.4rem;
             line-height: 1.6rem; }
-        .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox.active {
+        .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBoxDates.presentSchedule {
           color: #fff;
           margin-top: -3rem;
-          font-family: "Lato_black", sans-serif; }
-          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox.active .week {
+          font-family: "Lato_black", sans-serif;
+          cursor: pointer; }
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBoxDates.presentSchedule .week {
             font-size: 6rem;
             line-height: 7.2rem; }
-          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBox.active .month {
+          .nextProgramSection .carousel_wrapper .carousel_container .dayMonth .scheduleBoxDates.presentSchedule .month {
             font-size: 1.8rem;
             line-height: 2.2rem; }
       .nextProgramSection .carousel_wrapper .carousel_container .hi-slide {
@@ -293,6 +300,8 @@
             .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .imageContainer {
               max-width: 400px;
               position: relative; }
+              .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .imageContainer img {
+                transition: all 1s; }
             .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .carouselItems .titleContent {
               opacity: 0;
               transition: all 2s ease-in; }
@@ -345,7 +354,7 @@
     .nextProgramSection .carouselControllers .countDisplay {
       color: #fff;
       font-size: 2rem; }
-      .nextProgramSection .carouselControllers .countDisplay span {
+      .nextProgramSection .carouselControllers .countDisplay .dynamicValue {
         font-size: 5rem; }
     .nextProgramSection .carouselControllers .expandIcon {
       margin-left: 2rem;
@@ -354,7 +363,7 @@
       font-size: 2.4rem;
       text-decoration: none; }
     .nextProgramSection .carouselControllers #previousProg {
-      color: #be6ad1;
+      color: #fff;
       padding-right: 1rem; }
     .nextProgramSection .carouselControllers #nextProg {
       color: #fff;
@@ -562,11 +571,12 @@
     align-items: end;
     width: 90%;
     padding-bottom: 5.2rem; }
-    .promosSection .promoCarousel .carousel_controllers_promo .countDisplay {
-      color: #fff;
-      font-size: 2rem; }
-      .promosSection .promoCarousel .carousel_controllers_promo .countDisplay span {
+    .promosSection .promoCarousel .carousel_controllers_promo .countDisplayPromo {
+      color: #fff; }
+      .promosSection .promoCarousel .carousel_controllers_promo .countDisplayPromo .dynamicValue {
         font-size: 5rem; }
+      .promosSection .promoCarousel .carousel_controllers_promo .countDisplayPromo .constantValue {
+        font-size: 2rem; }
     .promosSection .promoCarousel .carousel_controllers_promo a {
       font-size: 2.4rem;
       text-decoration: none; }

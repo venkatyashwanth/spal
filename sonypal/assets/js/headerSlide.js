@@ -2,12 +2,78 @@
   var slide = function (ele, options) {
     var $ele = $(ele);
     var setting = {
-      speed: 400,
+      speed: 1000,
       interval: 4000,
     };
     $.extend(true, setting, options);
 
     var screensize = screen.width;
+    // var states = [
+    //   {
+    //     $zIndex: 7,
+    //     $active: true,
+    //     width: "100%",
+    //     height: "100vh",
+    //     top: "0%",
+    //     left: "0%",
+    //     $opacity: 1,
+    //   },
+    //   {
+    //     $zIndex: 6,
+    //     $active: false,
+    //     width: "70%",
+    //     height: "100vh",
+    //     top: "0%",
+    //     left: "50%",
+    //     $opacity: 1,
+    //   },
+    //   {
+    //     $zIndex: 5,
+    //     $active: false,
+    //     width: "70%",
+    //     height: "100vh",
+    //     top: "0%",
+    //     left: "75%",
+    //     $opacity: 1,
+    //   },
+    //   {
+    //     $zIndex: 4,
+    //     $active: false,
+    //     width: "70%",
+    //     height: "100vh",
+    //     top: "0%",
+    //     left: "100%",
+    //     $opacity: 1,
+    //   },
+    //   {
+    //     $zIndex: 3,
+    //     $active: false,
+    //     width: "70%",
+    //     height: "100vh",
+    //     top: "0%",
+    //     left: "100%",
+    //     $opacity: 1,
+    //   },
+    //   {
+    //     $zIndex: 2,
+    //     $active: false,
+    //     width: "70%",
+    //     height: "100vh",
+    //     top: "0%",
+    //     left: "100%",
+    //     $opacity: 1,
+    //   },
+    //   {
+    //     $zIndex: 1,
+    //     $active: false,
+    //     width: "70%",
+    //     height: "100vh",
+    //     top: "0%",
+    //     left: "100%",
+    //     $opacity: 1,
+    //   },
+    // ];
+    
     var states = [
       {
         $zIndex: 7,
@@ -43,7 +109,7 @@
         height: "100vh",
         top: "0%",
         left: "100%",
-        $opacity: 1,
+        $opacity: 0,
       },
       {
         $zIndex: 3,
@@ -52,25 +118,25 @@
         height: "100vh",
         top: "0%",
         left: "100%",
-        $opacity: 1,
+        $opacity: 0,
       },
       {
-        $zIndex: 2,
+        $zIndex: -1,
         $active: false,
         width: "70%",
         height: "100vh",
         top: "0%",
         left: "100%",
-        $opacity: 1,
+        $opacity: 0,
       },
       {
         $zIndex: 1,
         $active: false,
-        width: "70%",
+        width: "0%",
         height: "100vh",
         top: "0%",
-        left: "100%",
-        $opacity: 1,
+        left: "0%",
+        $opacity: 0,
       },
     ];
 
@@ -163,11 +229,11 @@
         timer = null;
       })
       .on("mouseleave", function () {
-        // autoPlay();
+        autoPlay();
       });
 
     move();
-    // autoPlay();
+    autoPlay();
     function move() {
       $lis.each(function (index, element) {
         var state = states[index];
@@ -200,12 +266,41 @@
           $(titleImage).removeClass("inactive");
           var indexValue = index + 1;
           $("#headerSlideNumber").text(indexValue);
+
+          // check here
+          if (indexValue === 1) {
+            $("#hiSlideHeaderprev").css("color", "#be6ad1");
+            $('#hiSlideHeaderprev').css('pointer-events', 'none');
+
+          } else {
+            $("#hiSlideHeaderprev").css("color", "#fff");
+            $('#hiSlideHeaderprev').css('pointer-events', 'initial');
+          }
+
+          // color: #be6ad1;
+          if (indexValue === 7) {
+            $("#hiSlideHeadernext").css("color", "#be6ad1");
+            $("#hiSlideHeadernext").css('pointer-events', 'none');
+          } else {
+            $("#hiSlideHeadernext").css("color", "#fff");
+            $("#hiSlideHeadernext").css('pointer-events', 'initial');
+          }
+
+
+
+
+
+
         } else {
           $(titleImage).addClass("inactive");
           $(titleImage).removeClass("active");
         }
       });
     }
+
+
+    let totalValue = states.length;
+    $("#headerTotalSlideNumber").text(totalValue);
 
     function next() {
       states.unshift(states.pop());
