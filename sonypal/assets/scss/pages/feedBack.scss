@@ -24,7 +24,7 @@
       }
     }
     .formInputField {
-      height: 100px;
+      height: 10rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -35,6 +35,11 @@
         font-weight: bold;
         line-height: 2.4rem;
         font-size: 2rem;
+      }
+      p{
+        color: red !important;
+        padding-top: 1rem;
+        margin-bottom: -2.6rem;
       }
     }
     .submitBtnContainer {
@@ -93,23 +98,20 @@
         margin-top: 2rem;
       }
       .channelsList {
-        // max-height: 23.2rem;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        height: 260px;
-        // height: 240px;
-        // width: 39rem;
+        height: 26rem;
         width: 39rem;
         margin-top: 2.3rem;
 
         @include breakpoint(ipad-max) {
-          height: 220px;
+          height: 22rem;
           align-items: center;
           width: 100%;
         }
         @include breakpoint(custom-small-mobile-max) {
-          height: 200px;
+          height: 20rem;
           align-items: center;
           width: 100%;
         }
@@ -118,7 +120,6 @@
           display: flex;
           align-items: center;
           width: 19rem;
-          // padding: 1.8rem 1.2rem;
           padding: 1rem 1.2rem;
           margin-bottom: 0.8rem;
           flex-grow: 1;
@@ -149,11 +150,9 @@
           }
         }
         .channelContainer.videocon {
-          // min-height: 11.6rem;
           flex-shrink: 1;
         }
         .channelContainer.reliance {
-          // min-height: 11rem;
           flex-shrink: 1;
         }
       }

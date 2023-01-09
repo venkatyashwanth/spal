@@ -77,6 +77,10 @@
       next();
     });
 
+    $("#nextProgramButtonImg").on("click",function(){
+      next();
+    })
+
     let prevActived = false;
     $("#previousProg").on("click", function () {
       states.push(states.shift());
@@ -148,14 +152,16 @@
             $("#previousProg").css("pointer-events", "initial");
           }
 
-          // color: #be6ad1;
           if (indexValue === 7) {
             $("#nextProg").css("color", "#be6ad1");
             $("#nextProg").css("pointer-events", "none");
+            $("#nextProgramButtonImg").css("pointer-events", "none");
           } else {
             $("#nextProg").css("color", "#fff");
             $("#nextProg").css("pointer-events", "initial");
+            $("#nextProgramButtonImg").css("pointer-events", "initial");
           }
+          
         } else {
           $("#programTitleContainer").removeClass("active");
         }

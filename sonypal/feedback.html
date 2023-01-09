@@ -7,12 +7,10 @@
     <title>Feedback</title>
 
     <!-- external-css -->
-    <!-- external-css -->
     <link rel="stylesheet" href="./assets/font-awesome/css/all.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/pages/feedBack.css" />
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/pages/aboutPage.css" />
   </head>
   <body>
     <section class="feedBack_section">
@@ -28,7 +26,11 @@
 
       <div class="navigationBar">
         <a href="#0">
-          <img class="sonyLogo" src="./assets/images/sonypal_logo.svg" alt="sonypalLogo" />
+          <img
+            class="sonyLogo"
+            src="./assets/images/sonypal_logo.svg"
+            alt="sonypalLogo"
+          />
         </a>
         <div class="nav-menu">
           <div class="d-none d-sm-block nav-menu-items">
@@ -104,29 +106,30 @@
                   <option value="3">SonyYay</option>
                 </select>
               </div>
-              <div class="d-none d-md-block col-md-1">
-
-              </div>
+              <div class="d-none d-md-block col-md-1"></div>
               <div class="col-12 col-md-5 formInputField">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Full Name"
                 />
+                <!-- <p>* Error Text</p> -->
               </div>
-              <div class="col-12 col-md-6  formInputField">
+              <div class="col-12 col-md-6 formInputField">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Phone NO."
                 />
+                <!-- <p>* Error Text</p> -->
               </div>
-              <div class="col-12 col-md-6  formInputField">
+              <div class="col-12 col-md-6 formInputField">
                 <input
                   type="email"
                   class="form-control"
                   placeholder="Mail Id"
                 />
+                <!-- <p>* Error Text</p> -->
               </div>
               <div class="col-12 mb-5 formInputField">
                 <input
@@ -135,18 +138,17 @@
                   aria-describedby="emailHelp"
                   placeholder="Message"
                 />
+                <!-- <p>* Error Text</p> -->
               </div>
               <div class="col-12 d-flex justify-content-end submitBtnContainer">
-                <input type="submit">
+                <input type="submit" />
               </div>
             </div>
           </form>
         </div>
       </div>
 
-      <div class="emptySpace">
-
-      </div>
+      <div class="emptySpace"></div>
     </section>
 
     <footer class="footerSection">
@@ -354,6 +356,11 @@
 
     <!-- external JS -->
     <!-- <script defer src="./assets/js/sample.js"></script> -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- external js -->
+    <!-- <script defer src="./assets/js/toggleActiveClasss.js"></script> -->
     <script defer src="./assets/js/toggleSideBar.js"></script>
   </body>
 </html>

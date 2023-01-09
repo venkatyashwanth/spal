@@ -110,13 +110,14 @@
           margin: 0px;
           padding: 0px; }
           .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer {
-            max-width: 55%;
+            max-width: 50%;
             height: 100vh;
             overflow: hidden;
             position: relative; }
             @media (max-width: 991px) {
               .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer {
-                max-width: 100%; } }
+                max-width: 55%;
+                height: 100%; } }
             @media (max-width: 575px) {
               .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer {
                 max-width: 80%;
@@ -131,12 +132,14 @@
               transform: translateX(-50%); }
               @media (max-width: 991px) {
                 .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer img {
-                  width: 100%; } }
+                  width: 100%;
+                  height: 100%;
+                  left: 50%; } }
               @media (max-width: 575px) {
                 .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer img {
-                  width: auto;
+                  width: 100vw;
                   left: 0%;
-                  transform: translateX(-5%); } }
+                  transform: translateX(0%); } }
             .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer .imageTitle.inactive {
               position: absolute;
               right: 1rem;
@@ -158,11 +161,13 @@
               margin: 2rem;
               background-image: linear-gradient(to right, #2a1137 50%, rgba(255, 255, 255, 0) 50%);
               border-bottom-left-radius: 2rem;
-              animation: showText 2s; }
+              animation-name: showText;
+              animation-duration: 3s; }
               .heroSection .heroSection__content .heroSection_textContent .heroSection__animation .hi-slide .maincarousel .carouselItemsHeader .imageContainer .imageTitle.active p {
                 font-size: 3rem;
                 line-height: 3.6rem;
-                color: #ffffff; }
+                color: #ffffff;
+                white-space: nowrap; }
 
 @keyframes showText {
   0% {
@@ -223,7 +228,7 @@
           .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox .border_box {
             position: absolute;
             bottom: 0x;
-            right: -.3rem;
+            right: -0.3rem;
             transform: translate(60%, -45%); }
             .nextProgramSection .carousel_wrapper .carousel_container .programTitle .titleBox .border_box img {
               width: 4rem; }
@@ -344,6 +349,25 @@
     opacity: 0.5; }
   100% {
     opacity: 1; } }
+          .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .nextCarouselSlide {
+            position: absolute;
+            right: 3%;
+            bottom: -30%;
+            width: 12%;
+            height: 50%;
+            height: "100vh";
+            z-index: 999999;
+            background-color: rgba(0, 128, 0, 0);
+            cursor: pointer; }
+          .nextProgramSection .carousel_wrapper .carousel_container .hi-slide .maincarousel .prevCarouselSlide {
+            position: absolute;
+            left: 2%;
+            bottom: 0%;
+            width: 40%;
+            height: 100%;
+            z-index: 999999;
+            background-color: rgba(0, 128, 0, 0);
+            cursor: pointer; }
   .nextProgramSection .carouselControllers {
     position: absolute;
     bottom: -30px;
@@ -359,6 +383,40 @@
     .nextProgramSection .carouselControllers .expandIcon {
       margin-left: 2rem;
       cursor: pointer; }
+    .nextProgramSection .carouselControllers .videoModal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 10rem;
+      left: 0;
+      top: 0%;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background-color: rgba(0, 0, 0, 0.4); }
+      .nextProgramSection .carouselControllers .videoModal .modal-content {
+        background-color: transparent;
+        margin: auto;
+        border: 1px solid #888;
+        width: 60%; }
+        @media (max-width: 575px) {
+          .nextProgramSection .carouselControllers .videoModal .modal-content {
+            padding-top: 15rem;
+            width: 90%; } }
+        .nextProgramSection .carouselControllers .videoModal .modal-content .close {
+          position: absolute;
+          right: 0px;
+          z-index: 999;
+          color: #aaaaaa;
+          text-align: right;
+          font-size: 28px;
+          font-weight: bold;
+          padding: 1rem; }
+          .nextProgramSection .carouselControllers .videoModal .modal-content .close:hover, .nextProgramSection .carouselControllers .videoModal .modal-content .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer; }
     .nextProgramSection .carouselControllers a {
       font-size: 2.4rem;
       text-decoration: none; }
@@ -368,15 +426,6 @@
     .nextProgramSection .carouselControllers #nextProg {
       color: #fff;
       padding-left: 1rem; }
-
-@keyframes example {
-  from {
-    bottom: 0%;
-    left: 100%;
-    height: 0px; }
-  to {
-    height: 320px;
-    left: 0%; } }
 
 .mobileComingUpSection {
   background-image: linear-gradient(to right bottom, #313ec9, #843fb3); }
@@ -418,26 +467,25 @@
       .mobileComingUpSection .contentBox .dayMonth .scheduleBox.active span {
         font-size: 2rem;
         color: #fff; }
-    .mobileComingUpSection .contentBox .slidingSection {
-      margin-top: 8rem; }
-      .mobileComingUpSection .contentBox .slidingSection .carouselContainer {
-        overflow: hidden; }
-        .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide {
-          width: 100% !important;
-          margin-top: 0px !important;
-          height: 28rem; }
-          .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems {
-            position: absolute;
-            margin: 0px;
-            padding: 0px;
-            cursor: pointer; }
-            .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer {
-              width: 100%;
-              height: 28rem;
-              position: relative; }
-              .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer img {
-                height: 100%;
-                width: auto; }
+    .mobileComingUpSection .contentBox .slidingSection .carouselContainer {
+      overflow: hidden; }
+      .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide {
+        width: 100% !important;
+        margin-top: 0px !important;
+        height: 38rem; }
+        .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems {
+          position: absolute;
+          margin: 0px;
+          padding: 0px;
+          cursor: pointer; }
+          .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer {
+            width: 100%;
+            height: 38rem;
+            position: relative; }
+            .mobileComingUpSection .contentBox .slidingSection .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer img {
+              height: 100%;
+              width: auto;
+              transition: all 1s; }
   .mobileComingUpSection .carouselButtons {
     display: flex;
     justify-content: space-between;
@@ -523,26 +571,67 @@
       margin-right: 6rem;
       margin-top: 2rem;
       cursor: pointer; }
+    .promosSection .promoTitleContainer .socialMediaContainer .videoModal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 0rem;
+      left: 0;
+      top: 0%;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background-color: rgba(0, 0, 0, 0.4); }
+      .promosSection .promoTitleContainer .socialMediaContainer .videoModal .modal-content {
+        padding-top: 5rem;
+        margin: auto;
+        width: 60%;
+        position: relative; }
+        @media (max-width: 575px) {
+          .promosSection .promoTitleContainer .socialMediaContainer .videoModal .modal-content {
+            padding-top: 15rem;
+            width: 90%; } }
+        .promosSection .promoTitleContainer .socialMediaContainer .videoModal .modal-content .close {
+          position: absolute;
+          right: 0px;
+          z-index: 999;
+          color: #aaaaaa;
+          font-size: 28px;
+          font-weight: bold;
+          padding: 1rem; }
+          .promosSection .promoTitleContainer .socialMediaContainer .videoModal .modal-content .close:hover, .promosSection .promoTitleContainer .socialMediaContainer .videoModal .modal-content .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer; }
   .promosSection .promoTitleContainer::after {
     content: "";
     clear: both;
     display: table; }
   .promosSection .promoCarousel .carouselContainer {
-    height: 60rem;
+    height: 45rem;
     overflow: hidden; }
+    @media (max-width: 575px) {
+      .promosSection .promoCarousel .carouselContainer {
+        height: 40rem; } }
     .promosSection .promoCarousel .carouselContainer .hi-slide {
       width: 95% !important;
-      margin: 10px auto 0 !important; }
+      margin: 10px auto 0 !important;
+      height: 8rem; }
+      @media (max-width: 575px) {
+        .promosSection .promoCarousel .carouselContainer .hi-slide {
+          height: 8rem; } }
       .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems {
         position: absolute;
         margin: 0px;
-        padding: 0px;
-        cursor: pointer; }
+        padding: 0px; }
         .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer {
           width: 80%;
           position: relative; }
           .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer .programImage {
             border-radius: 20px; }
+          .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems .imageContainer img {
+            transition: all 1s; }
         .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems .rightBorder {
           display: none;
           position: absolute;
@@ -556,13 +645,32 @@
           font-size: 2rem;
           color: white;
           padding-top: 1rem;
-          line-height: 3.6rem; }
+          line-height: 3.6rem;
+          white-space: nowrap; }
           @media (max-width: 991px) {
             .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems p {
               font-size: 1.8rem; } }
           @media (max-width: 575px) {
             .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems p {
               font-size: 2rem; } }
+      .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .nextPromoSlider {
+        position: absolute;
+        background-color: rgba(0, 128, 0, 0);
+        top: 215%;
+        left: 50%;
+        height: 100%;
+        z-index: 99;
+        width: 20%;
+        cursor: pointer; }
+      .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .doublenextPromoSlider {
+        position: absolute;
+        background-color: rgba(0, 128, 0, 0);
+        top: 215%;
+        left: 80%;
+        height: 100%;
+        z-index: 99;
+        width: 20%;
+        cursor: pointer; }
       .promosSection .promoCarousel .carouselContainer .hi-slide .maincarousel .carouselItems.active .rightBorder {
         display: block; }
   .promosSection .promoCarousel .carousel_controllers_promo {
@@ -624,17 +732,17 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      height: 260px;
+      height: 26rem;
       width: 39rem;
       margin-top: 2.3rem; }
       @media (max-width: 991px) {
         .footerSection .channelsMainContainer .channelsSection .channelsList {
-          height: 220px;
+          height: 22rem;
           align-items: center;
           width: 100%; } }
       @media (max-width: 359px) {
         .footerSection .channelsMainContainer .channelsSection .channelsList {
-          height: 200px;
+          height: 20rem;
           align-items: center;
           width: 100%; } }
       .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer {

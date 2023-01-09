@@ -15,7 +15,7 @@
         .feedBack_section .feedBackForm_container h1 {
           font-size: 7rem; } }
     .feedBack_section .feedBackForm_container .formInputField {
-      height: 100px;
+      height: 10rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-end; }
@@ -26,6 +26,10 @@
         font-weight: bold;
         line-height: 2.4rem;
         font-size: 2rem; }
+      .feedBack_section .feedBackForm_container .formInputField p {
+        color: red !important;
+        padding-top: 1rem;
+        margin-bottom: -2.6rem; }
     .feedBack_section .feedBackForm_container .submitBtnContainer {
       margin-bottom: -1.8rem; }
       .feedBack_section .feedBackForm_container .submitBtnContainer input[type="submit"] {
@@ -69,17 +73,17 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      height: 260px;
+      height: 26rem;
       width: 39rem;
       margin-top: 2.3rem; }
       @media (max-width: 991px) {
         .footerSection .channelsMainContainer .channelsSection .channelsList {
-          height: 220px;
+          height: 22rem;
           align-items: center;
           width: 100%; } }
       @media (max-width: 359px) {
         .footerSection .channelsMainContainer .channelsSection .channelsList {
-          height: 200px;
+          height: 20rem;
           align-items: center;
           width: 100%; } }
       .footerSection .channelsMainContainer .channelsSection .channelsList .channelContainer {

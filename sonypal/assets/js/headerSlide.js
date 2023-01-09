@@ -8,72 +8,6 @@
     $.extend(true, setting, options);
 
     var screensize = screen.width;
-    // var states = [
-    //   {
-    //     $zIndex: 7,
-    //     $active: true,
-    //     width: "100%",
-    //     height: "100vh",
-    //     top: "0%",
-    //     left: "0%",
-    //     $opacity: 1,
-    //   },
-    //   {
-    //     $zIndex: 6,
-    //     $active: false,
-    //     width: "70%",
-    //     height: "100vh",
-    //     top: "0%",
-    //     left: "50%",
-    //     $opacity: 1,
-    //   },
-    //   {
-    //     $zIndex: 5,
-    //     $active: false,
-    //     width: "70%",
-    //     height: "100vh",
-    //     top: "0%",
-    //     left: "75%",
-    //     $opacity: 1,
-    //   },
-    //   {
-    //     $zIndex: 4,
-    //     $active: false,
-    //     width: "70%",
-    //     height: "100vh",
-    //     top: "0%",
-    //     left: "100%",
-    //     $opacity: 1,
-    //   },
-    //   {
-    //     $zIndex: 3,
-    //     $active: false,
-    //     width: "70%",
-    //     height: "100vh",
-    //     top: "0%",
-    //     left: "100%",
-    //     $opacity: 1,
-    //   },
-    //   {
-    //     $zIndex: 2,
-    //     $active: false,
-    //     width: "70%",
-    //     height: "100vh",
-    //     top: "0%",
-    //     left: "100%",
-    //     $opacity: 1,
-    //   },
-    //   {
-    //     $zIndex: 1,
-    //     $active: false,
-    //     width: "70%",
-    //     height: "100vh",
-    //     top: "0%",
-    //     left: "100%",
-    //     $opacity: 1,
-    //   },
-    // ];
-    
     var states = [
       {
         $zIndex: 7,
@@ -87,7 +21,8 @@
       {
         $zIndex: 6,
         $active: false,
-        width: "70%",
+        // width: "70%",
+        width: "50%",
         height: "100vh",
         top: "0%",
         left: "50%",
@@ -152,75 +87,83 @@
           $opacity: 1,
         },
         {
-          $zIndex: 1,
+          $zIndex: 6,
           $active: false,
-          width: "70%",
+          width: "0%",
+          height: "100vh",
+
+          top: "0%",
+          left: "100%",
+          $opacity: 0,
+        },
+        {
+          $zIndex: 5,
+          $active: false,
+          width: "0%",
           height: "100vh",
           top: "0%",
-          // left: "100%",
           left: "0%",
-          $opacity: 1,
+          $opacity: 0,
         },
         {
           $zIndex: 1,
           $active: false,
-          width: "70%",
+          width: "0%",
           height: "100vh",
           top: "0%",
-          // left: "100%",
           left: "0%",
-          $opacity: 1,
+          $opacity: 0,
         },
         {
           $zIndex: 1,
           $active: false,
-          width: "70%",
+          width: "0%",
           height: "100vh",
           top: "0%",
-          // left: "100%",
           left: "0%",
-          $opacity: 1,
+          $opacity: 0,
         },
         {
           $zIndex: 1,
           $active: false,
-          width: "70%",
+          width: "0%",
           height: "100vh",
           top: "0%",
-          // left: "100%",
           left: "0%",
-          $opacity: 1,
+          $opacity: 0,
         },
         {
           $zIndex: 1,
           $active: false,
-          width: "70%",
-          height: "100vh",
-          top: "0%",
-          // left: "100%",
-          left: "0%",
-          $opacity: 1,
-        },
-        {
-          $zIndex: 1,
-          $active: false,
-          width: "70%",
+          width: "0%",
           height: "100vh",
           top: "0%",
           left: "0%",
-          $opacity: 1,
+          $opacity: 0,
         },
       ];
     }
 
     var $lis = $ele.find(".carouselItemsHeader");
     var timer = null;
+
     $("#hiSlideHeadernext").on("click", function () {
       next();
     });
+    // For mobile
+    $("#headerSliderTouch").on("swiped-right", (event) => {
+      states.push(states.shift());
+      move();
+    });
+    
+
     $("#hiSlideHeaderprev").on("click", function () {
       states.push(states.shift());
       move();
+    });
+    // For mobile
+    $("#headerSliderTouch").on("swiped-left", (event) => {
+      next();
     });
 
     $ele
@@ -267,37 +210,34 @@
           var indexValue = index + 1;
           $("#headerSlideNumber").text(indexValue);
 
-          // check here
           if (indexValue === 1) {
             $("#hiSlideHeaderprev").css("color", "#be6ad1");
-            $('#hiSlideHeaderprev').css('pointer-events', 'none');
-
+            $("#hiSlideHeaderprev").css("pointer-events", "none");
           } else {
             $("#hiSlideHeaderprev").css("color", "#fff");
-            $('#hiSlideHeaderprev').css('pointer-events', 'initial');
+            $("#hiSlideHeaderprev").css("pointer-events", "initial");
           }
 
-          // color: #be6ad1;
           if (indexValue === 7) {
             $("#hiSlideHeadernext").css("color", "#be6ad1");
-            $("#hiSlideHeadernext").css('pointer-events', 'none');
+            $("#hiSlideHeadernext").css("pointer-events", "none");
           } else {
             $("#hiSlideHeadernext").css("color", "#fff");
-            $("#hiSlideHeadernext").css('pointer-events', 'initial');
+            $("#hiSlideHeadernext").css("pointer-events", "initial");
           }
-
-
-
-
-
-
         } else {
           $(titleImage).addClass("inactive");
           $(titleImage).removeClass("active");
         }
+
+        // Hide the title
+        if (state.$zIndex === 1) {
+          $(titleImage).css("opacity", "0");
+        } else {
+          $(titleImage).css("opacity", "1");
+        }
       });
     }
-
 
     let totalValue = states.length;
     $("#headerTotalSlideNumber").text(totalValue);
